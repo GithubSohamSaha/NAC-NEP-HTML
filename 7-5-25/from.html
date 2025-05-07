@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAC Form</title>
+    <style>
+        #form-fieldset {
+            border: 2px dotted #4CAF50;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            height: 50%;
+            background-color: #f9f9f9;
+        }
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+        }  
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        select {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    In HTML, the id and class attributes are used to identify and style elements.
+
+    id Attribute
+    Purpose: Uniquely identifies an element on the page.
+    Usage: Each id must be unique within a page.
+    Example: <input type="text" id="firstname" name="name">
+    Use Case: Targeting a specific element in CSS or JavaScript.
+    class Attribute
+    Purpose: Groups elements with the same class name for styling or scripting.
+    Usage: Multiple elements can share the same class.
+    Example: <input type="text" class="form-control" name="name">
+    -->
+    
+    <fieldset id="form-fieldset">
+        <legend align="center"><h1>NAC FORM</h1></legend>
+        <!-- The form tag  in HTML Helps to create form in webpage -->
+        <form action="" method="post">
+            <!-- The label tag in HTML is used to define a label for an <input> element. The <label> element can be associated with a form control by using the id attribute of the <input> element. -->
+            <label for="firstname">First Name:</label>
+            <!-- The input tag in HTML is used to create interactive controls in a web form that users can use to enter data. -->
+            <input type="text" name="firstname" placeholder="Enter your First name" required id="firstname"><br><br> 
+            
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Enter your Last name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required id="email"><br><br>   
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" required id="phone"><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address" placeholder="Enter your address" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required><br><br>
+            
+            <label>Gender: </label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="third">Other
+            <br><br>
+            <label for="gender">Type of Area</label>
+            <select name="gender" id="gender" required>
+                <option value="" disabled selected>Select your area</option>
+                <option value="urban" >urban</option>
+                <option value="rural">rural</option>
+                <option value="city">city</option>
+            </select>
+            <br><br>
+            <input type="checkbox" name="subscribe" id="subscribe"> Subscribe to newsletter<br><br>
+
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" placeholder="Enter your comments" rows="4" cols="50"></textarea>
+            <br><br>
+            <center>
+                <input type="submit" value="Submit" name="submit">
+                <input type="reset" value="Reset" name="reset"><br><br>
+            </center>
+        </form>
+    </fieldset>
+</body>
+</html>
